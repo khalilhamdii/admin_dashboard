@@ -1,0 +1,15 @@
+<%= form_for user, url: new_user_registration_path do |f| %>
+  <%= render "devise/shared/error_messages", resource: user %>
+  <div class="form-group">
+    <%= f.text_field :full_name, autofocus: true, placeholder: "Full Name", class: "form-control form-control-user" %></div>
+  <div class="form-group">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address", class: "form-control form-control-user" %></div>
+  <div class="form-group">
+    <%= f.text_field :phone_number, autofocus: true, placeholder: "Phone Number", class: "form-control form-control-user" %></div>
+  <div class="form-group">
+    <%= f.text_field :company_name, autofocus: true, placeholder: "Company Name", class: "form-control form-control-user" %></div>
+  <div class="form-group">
+    <%= f.text_field :company_address, autofocus: true, placeholder: "Company Adress", class: "form-control form-control-user" %></div>
+  <%= f.submit "Save user", class: "btn btn-primary btn-block text-white btn-user" %>
+  <hr>
+<% end %>

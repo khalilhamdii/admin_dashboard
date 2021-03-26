@@ -45,13 +45,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>Airi Satou</td>
-                    <td>Accountant</td>
-                    <td>Accountant</td>
-                    <td>Tokyo</td>
-                    <td class="d-flex justify-content-lg-center"><i class="fa fa-info-circle"></i><i class="fa fa-pencil mx-2"></i><i class="fa fa-remove"></i></td>
-                  </tr>
+                  <% @users.each do |user| %>
+                    <tr>
+                      <td><%= user.company_name %></td>
+                      <td><%= user.full_name %></td>
+                      <td><%= user.email %></td>
+                      <td><%= user.phone_number %></td>
+                      <td class="d-flex justify-content-lg-center"><i class="fa fa-info-circle"></i><i class="fa fa-pencil mx-2"></i><i class="fa fa-remove"></i></td>
+                    </tr>
+                  <% end %>
                 </tbody>
               </table>
             </div>

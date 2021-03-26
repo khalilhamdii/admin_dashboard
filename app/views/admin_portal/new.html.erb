@@ -1,0 +1,19 @@
+<div class="bg-gradient-primary vh-100">
+  <div class="container">
+    <div class=" row justify-content-center">
+      <div class="col-md-9 col-lg-6 col-xl-6">
+        <div class="card shadow-lg o-hidden border-0 my-5 ">
+          <div class="card-body p-0">
+            <div class="p-5">
+              <div class="text-center">
+                <h4 class="text-dark mb-4">New user</h4>
+              </div>
+              <%= render 'form', user: @user %>
+              <div class="text-center"><%= link_to('Go back to the admin portal', portal_path, :class => "small")  %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
