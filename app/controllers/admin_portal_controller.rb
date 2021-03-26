@@ -13,10 +13,11 @@ class AdminPortalController < ApplicationController
   def edit
   end
 
-  # # POST /users or /users.json
   def create
+    # @user = User.new(user_params)
     @user = User.new(user_params)
-
+    random_password = Devise.friendly_token.first(8)
+    @user.password = random_password
     respond_to do |format|
       if @user.save
         format.html { redirect_to portal_path, notice: "User account successfully created. A password reset email has been sent to the user." }
@@ -26,7 +27,6 @@ class AdminPortalController < ApplicationController
     end
   end
 
-  # # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -50,7 +50,6 @@ class AdminPortalController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def user_params
     params.require(:user).permit(:full_name, :email, :phone_number, :company_name, :company_address)
   end
