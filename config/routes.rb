@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   devise_for :users, :skip => [:registrations] 
 
   root to: "user_dashboard#index"
+  resources :admin_portal
   get '/portal', to: 'admin_portal#index', as: 'portal'
-  get "/portal/new" => "admin_portal#new", as: "new_user_registration"
-  post "/portal/new" => "admin_portal#create", as: "user_registration"
+  post "/admin_portal/new" => "admin_portal#create"
+  # get "/portal/edit" => "admin_portal#edit", as: "edit_user"
+  # put "/portal/edit" => "admin_portal#update"
   get '/dashboard', to: 'user_dashboard#index', as: 'dashboard'
 end

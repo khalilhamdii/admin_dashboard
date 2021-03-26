@@ -10,9 +10,8 @@ class AdminPortalController < ApplicationController
     @user = User.new
   end
 
-  # # GET /users/1/edit
-  # def edit
-  # end
+  def edit
+  end
 
   # # POST /users or /users.json
   def create
@@ -28,23 +27,22 @@ class AdminPortalController < ApplicationController
   end
 
   # # PATCH/PUT /users/1 or /users/1.json
-  # def update
-  #   respond_to do |format|
-  #     if @user.update(user_params)
-  #       format.html { redirect_to @user, notice: "User was successfully updated." }
-  #     else
-  #       format.html { render :edit, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to portal_path, notice: "User was successfully updated." }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
 
-  # # DELETE /users/1 or /users/1.json
-  # def destroy
-  #   @user.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to users_url, notice: "User was successfully destroyed." }
-  #   end
-  # end
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to portal_path, notice: "User was successfully destroyed." }
+    end
+  end
 
   private
 

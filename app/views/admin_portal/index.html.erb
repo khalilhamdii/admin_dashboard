@@ -32,7 +32,7 @@
         </h3>
         <div class="card shadow">
           <div class="card-header text-right py-3">
-            <%= link_to "New User", new_user_registration_path, class: "btn btn-primary text-white btn-user" %></div>
+            <%= link_to "New User", new_admin_portal_path, class: "btn btn-primary text-white btn-user" %></div>
           <div class="card-body">
             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
               <table class="table my-0" id="dataTable">
@@ -51,7 +51,7 @@
                       <td><%= user.full_name %></td>
                       <td><%= user.email %></td>
                       <td><%= user.phone_number %></td>
-                      <td class="d-flex justify-content-lg-center"><i class="fa fa-info-circle"></i><i class="fa fa-pencil mx-2"></i><i class="fa fa-remove"></i></td>
+                      <td class="d-flex justify-content-lg-center"><%= link_to '<i class="fa fa-pencil mr-4"></i>'.html_safe, edit_admin_portal_path(user) %><%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_portal_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
                     </tr>
                   <% end %>
                 </tbody>
