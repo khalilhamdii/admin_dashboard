@@ -1455,7 +1455,6 @@ pre code {
 }
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #e3e6f0;
 }
 .table tbody + tbody {
   border-top: 2px solid #e3e6f0;
@@ -9256,7 +9255,7 @@ a:focus {
   border: 0;
   font-weight: 900;
   content: '\f105';
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
 }
 .sidebar .nav-item.dropdown.show .dropdown-toggle:after,
 .topbar .nav-item.dropdown.show .dropdown-toggle:after {
@@ -9495,7 +9494,7 @@ a:focus {
 .sidebar #sidebarToggle:after {
   font-weight: 900;
   content: '\f104';
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   margin-right: 0.1rem;
 }
 .sidebar #sidebarToggle:hover {
@@ -9510,7 +9509,7 @@ a:focus {
 }
 .sidebar.toggled #sidebarToggle:after {
   content: '\f105';
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   margin-left: 0.25rem;
 }
 .sidebar .sidebar-brand {
@@ -9586,7 +9585,7 @@ a:focus {
     border: 0;
     font-weight: 900;
     content: '\f107';
-    font-family: Font Awesome\5 Free;
+    font-family: Font awesome\5 Free;
   }
   .sidebar .nav-item .nav-link[data-toggle='collapse'].collapsed:after {
     content: '\f105';
@@ -9805,7 +9804,7 @@ a:focus {
   line-height: 51px;
   font-weight: 900;
   content: '\f107';
-  font-family: Font Awesome\5 Free;
+  font-family: Font awesome\5 Free;
   color: #d1d3e2;
 }
 .card .card-header[data-toggle='collapse'].collapsed {
