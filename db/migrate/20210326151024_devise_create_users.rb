@@ -10,7 +10,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :company_address
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
-
+      t.boolean :admin_role, default: false
+      t.boolean :user_role, default: true
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
@@ -34,5 +35,15 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       u.email     = 'user@user.com'
       u.password    = 'password'
   end
+
+  User.create! do |u|
+    u.full_name = 'Admin'
+    u.phone_number = '+21650616873'
+    u.company_name = 'ZendMind Studio'
+    u.company_address = 'India'
+    u.email     = 'admin@admin.com'
+    u.password  = 'password'
+    u.admin_role = true
+end
   end
 end
