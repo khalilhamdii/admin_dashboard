@@ -6,7 +6,7 @@ to the user dashboard.
 
 ## NOTE
 
-To login as user please use the following info :
+To login as an admin please use the following info :
 
 - Email : admin@admin.com
 - Password : password
