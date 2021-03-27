@@ -4,15 +4,17 @@ In this web application, Only Admin can create and manage User accounts. Both ro
 user with Admin role logs in, they are taken to admin portal and when User logs in they are taken
 to the user dashboard.
 
-## Description
+## NOTE
 
-Easy Rent back-end API is a Ruby On Rails API only server. It contains four tables :
+To login as user please use the following info :
 
-- Users table.
-- Rents table.
-- Cars table.
-- Sessions table.
-  This project works as an external API for the Easy Rent Web app to store and fetch data. Please find below the API Endpoints provided.
+- Email : admin@admin.com
+- Password : password
+
+To login as a normal user use the following info :
+
+- Email : user@user.com
+- Password : password
 
 ## Library Directory 📙
 
