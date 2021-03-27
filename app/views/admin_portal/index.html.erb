@@ -51,7 +51,11 @@
                       <td><%= user.full_name %></td>
                       <td><%= user.email %></td>
                       <td><%= user.phone_number %></td>
-                      <td class="d-flex justify-content-lg-center"><%= link_to '<i class="fa fa-pencil mr-4"></i>'.html_safe, edit_admin_portal_path(user) %><%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_portal_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                      <td class="d-flex justify-content-lg-center"><%= link_to '<i class="fa fa-pencil mr-4"></i>'.html_safe, edit_admin_portal_path(user) %>
+                        <% unless user.admin_role %>
+                          <%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_portal_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <% end %>
+                      </td>
                     </tr>
                   <% end %>
                 </tbody>

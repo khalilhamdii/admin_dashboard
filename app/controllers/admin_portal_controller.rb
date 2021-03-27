@@ -14,7 +14,6 @@ class AdminPortalController < ApplicationController
   end
 
   def create
-    # @user = User.new(user_params)
     @user = User.new(user_params)
     random_password = Devise.friendly_token.first(8)
     @user.password = random_password
