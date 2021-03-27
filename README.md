@@ -20,14 +20,16 @@ To login as a normal user use the following info :
 
 | Contents                    |
 | --------------------------- |
-| [Live Demo](#live-demo)     |
 | [Built With](#built-with-🛠) |
 | [Setup](#setup-⏳)          |
 | [Authors](#authors)         |
 
-## Live Demo
+## Built with 🛠
 
-[Live Demo](https://zendmind-assignement.herokuapp.com/)
+- Ruby On Rails
+- Devise Gem
+- PostgreSQL
+- Bootstrap
 
 ## Setup ⏳
 
