@@ -6,7 +6,7 @@ to the user dashboard.
 
 ## NOTE
 
-To login as user please use the following info :
+To login as an admin please use the following info :
 
 - Email : admin@admin.com
 - Password : password
@@ -44,8 +44,7 @@ To login as a normal user use the following info :
 7. - [ ] Run `yarn install --check-files` to check all the files.
 8. - [ ] Run `rails db:create` to create a local database
 9. - [ ] Run `rails db:migrate` to migrate the database
-10. - [ ] Run `rails db:seed` to populate the database
-11. - [ ] Run `http://localhost:3000/` in your browser to launch the rails API
+10. - [ ] Run `http://localhost:3000/` in your browser to launch the server
 
 ## Authors
 
