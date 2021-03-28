@@ -1,0 +1,74 @@
+<div id="wrapper">
+  <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+    <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+        <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-tools"></i></div>
+        <div class="sidebar-brand-text mx-3"><span>ADMIN</span></div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <ul class="navbar-nav text-light" id="accordionSidebar">
+        <li class="nav-item">
+          <%= link_to portal_path, class: "nav-link active" do %>
+            <i class="fas fa-table"></i>&nbsp; ACCOUNTS
+          <% end %></li>
+        <li class="nav-item"></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="d-flex flex-column" id="content-wrapper">
+    <div id="content">
+      <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+        <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+          <ul class="navbar-nav flex-nowrap ml-auto ">
+            <li class="nav-item "><a class=" nav-link text-dark " href="#">Logged In as :  <%= current_user.full_name %></a>
+            </li>
+            <div class="d-none d-sm-block topbar-divider"></div>
+            <li class="nav-item "><%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "nav-link text-dark")  %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <h3 class="text-dark mb-4">Index of User accounts<br>
+        </h3>
+        <div class="card shadow">
+          <div class="card-header text-right py-3">
+            <%= link_to "New User", new_admin_portal_path, class: "btn btn-primary text-white btn-user" %></div>
+          <div class="card-body">
+            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+              <table class="table my-0" id="dataTable">
+                <thead>
+                  <tr>
+                    <th>COMPANY NAME</th>
+                    <th>USER NAME</th>
+                    <th>EMAIL</th>
+                    <th>PHON NUMBER</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @users.each do |user| %>
+                    <tr>
+                      <td><%= user.company_name %></td>
+                      <td><%= user.full_name %></td>
+                      <td><%= user.email %></td>
+                      <td><%= user.phone_number %></td>
+                      <td class="d-flex justify-content-lg-center"><%= link_to '<i class="fa fa-pencil mr-4"></i>'.html_safe, edit_admin_portal_path(user) %>
+                        <% unless user.admin_role %>
+                          <%= link_to '<i class="fa fa-remove"></i>'.html_safe, admin_portal_path(user), method: :delete, data: { confirm: 'Are you sure?' } %>
+                        <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-white sticky-footer">
+      <div class="container my-auto">
+        <div class="text-center my-auto copyright"><span>Copyright © Khalil Hamdi 2021</span></div>
+      </div>
+    </footer>
+  </div>
+</div>
